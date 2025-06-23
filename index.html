@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partnership With China Chili | FBLA West-MEC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #D4AF37;
+      --yellow-dark: #B8941F;
+      --yellow-light: #F4E4A6;
+      --green: #1B5E20;
+      --green-dark: #0D3F11;
+      --green-light: #2E7D32;
+      --red: #C62828;
+      --red-dark: #8E1919;
+      --red-light: #E53935;
+      --dark-bg: #0A0A0A;
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --text-dark: #1A1A1A;
+      --text-light: #666;
+      --shadow-primary: 0 20px 40px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.15);
+      --gradient-primary: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+      --gradient-accent: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-dark) 100%);
+      --gradient-hero: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 50%, var(--green-light) 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(27, 94, 32, 0.03) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(198, 40, 40, 0.02) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+      animation: backgroundShift 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundShift {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    /* Header */
+    header {
+      background: var(--gradient-hero);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      animation: grain 0.8s steps(8, end) infinite;
+    }
+
+    @keyframes grain {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      10% { transform: translate(-5%, -10%) rotate(1deg); }
+      20% { transform: translate(-15%, 5%) rotate(-1deg); }
+      30% { transform: translate(7%, -25%) rotate(1deg); }
+      40% { transform: translate(-5%, 25%) rotate(-1deg); }
+      50% { transform: translate(-15%, 5%) rotate(1deg); }
+      60% { transform: translate(15%, 0%) rotate(-1deg); }
+      70% { transform: translate(0%, 15%) rotate(1deg); }
+      80% { transform: translate(3%, 35%) rotate(-1deg); }
+      90% { transform: translate(-10%, 10%) rotate(1deg); }
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      letter-spacing: -0.02em;
+      animation: slideInUp 1s ease-out;
+    }
+
+    header p {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      animation: slideInUp 1s ease-out 0.2s both;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      animation: slideInUp 1s ease-out 0.4s both;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-accent);
+      transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: -1;
+    }
+
+    nav a:hover::before {
+      left: 0;
+    }
+
+    nav a:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Main Content */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 6rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      background: var(--gradient-primary);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-accent);
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow-primary);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Colored Sections */
+    .section-highlight, .section-green, .section-red {
+      padding: 3rem;
+      border-radius: 24px;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .section-highlight {
+      background: var(--gradient-accent);
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+    }
+
+    .section-green {
+      background: var(--gradient-primary);
+      box-shadow: 0 20px 40px rgba(27, 94, 32, 0.3);
+    }
+
+    .section-red {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-light) 100%);
+      box-shadow: 0 20px 40px rgba(198, 40, 40, 0.3);
+    }
+
+    .section-highlight:hover, .section-green:hover, .section-red:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Team Grid */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .team-member {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-primary);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-member::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--gradient-primary);
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .team-member:hover::before {
+      transform: scaleX(1);
+    }
+
+    .team-member:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .team-member h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--green);
+    }
+
+    /* Buttons */
+    button {
+      background: var(--gradient-accent);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    button:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Accordion */
+    .accordion {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 1.5rem 2rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 16px;
+      margin: 1rem 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+    }
+
+    .accordion::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 300;
+      float: right;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .accordion.active::after {
+      transform: rotate(45deg);
+    }
+
+    .accordion:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .panel {
+      padding: 0;
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      max-height: 0;
+      overflow: hidden;
+      border-radius: 0 0 16px 16px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: none;
+    }
+
+    .panel-content {
+      padding: 2rem;
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    /* FBLA Section */
+    .fbla-banner {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 3rem;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(27, 94, 32, 0.3);
+      margin: 2rem 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fbla-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+    }
+
+    .fbla-banner:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(27, 94, 32, 0.4);
+    }
+
+    .fbla-logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fbla-logo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      margin: 5% auto;
+      padding: 3rem;
+      border-radius: 24px;
+      max-width: 600px;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: slideInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes slideInScale {
+      from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .close {
+      color: var(--text-light);
+      float: right;
+      font-size: 2rem;
+      font-weight: 300;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
+
+    .close:hover {
+      color: var(--red);
+      transform: scale(1.1);
+    }
+
+    /* Form Styles */
+    form {
+      margin-top: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.1);
+    }
+
+    form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    /* Feedback Message */
+    .feedback {
+      margin: 1rem 0;
+      font-weight: 600;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .feedback.success {
+      background: var(--green-light);
+      color: white;
+    }
+
+    .feedback.error {
+      background: var(--red-light);
+      color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--gradient-hero);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerGrain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23footerGrain)"/></svg>');
+    }
+
+    footer p {
+      position: relative;
+      z-index: 2;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .card, .team-member {
+    color: var(--text-dark); /* Ensures text is black on white cards */
+}
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 3rem 1rem;
+        min-height: 60vh;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      section {
+        margin-bottom: 4rem;
+      }
+
+      .card, .section-highlight, .section-green, .section-red, .fbla-banner {
+        padding: 2rem;
+      }
+
+      .team {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        padding: 1rem;
+      }
+
+      .nav-container {
+        gap: 0.25rem;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Scroll animations */
+    @media (prefers-reduced-motion: no-preference) {
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .animate-on-scroll.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>PARTNERSHIP WITH CHINA CHILI</h1>
+      <p>West-MEC Northeast Campus | FBLA National Leadership Conference 2025</p>
+      <div class="header-cta">
+        <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Explore Our Impact</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="#about">About</a>
+      <a href="#goals">Goals</a>
+      <a href="#team">Team</a>
+      <a href="#planning">Planning</a>
+      <a href="#development">Development</a>
+      <a href="#implementation">Implementation</a>
+      <a href="#publicity">Publicity</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#fbla">FBLA</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about" class="animate-on-scroll">
+      <h2>About the Project</h2>
+      <div class="card">
+        <p>Welcome to our groundbreaking partnership initiative with China Chili, a community-focused project designed to support immigrants and promote local business engagement. This initiative represents a collaboration between West-MEC Northeast Campus and FBLA, aiming to provide meaningful opportunities, transformative experiences, and comprehensive support for both immigrants and the broader community.</p>
+      </div>
+    </section>
+
+    <section id="goals" class="animate-on-scroll">
+      <h2>Project Goals</h2>
+      <div class="section-green">
+        <h3>Our Vision</h3>
+        <p>Our primary objectives are to strengthen relationships with immigrants, expand community outreach, and break down barriers to participation in local events and services.</p>
+      </div>
+      <div class="card">
+        <ul>
+          <li><strong>Provide a more stable relationship with immigrants</strong></li>
+          <li><strong>Provide some immigrants with experiences</strong></li>
+          <li><strong>Expand China Chili's outreach in its community</strong></li>
+          <li><strong>Promote immigrant-owned businesses</strong></li>
+          <li><strong>Break the stigma of donating food from restaurants</strong></li>
+          <li><strong>Provide stepping stones to change</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="team" class="animate-on-scroll">
+      <h2>Our Team</h2>
+      <div class="team">
+        <div class="team-member">
+          <h3>Viraaj Singh</h3>
+          <p>Responsible for publicity and media, showcasing the restaurant to immigrants and building community awareness through strategic outreach.</p>
+        </div>
+        <div class="team-member">
+          <h3>Andy Chen</h3>
+          <p>Handled communications with China Chili, building personal connections and fostering meaningful partnerships within the community.</p>
+        </div>
+        <div class="team-member">
+          <h3>Rohan John</h3>
+          <p>Developed project ideas and organized team efforts, coordinating strategic initiatives to maximize community impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="planning" class="animate-on-scroll">
+      <h2>Planning</h2>
+      <div class="card">
+        <p>Our comprehensive planning process included a detailed SWOT analysis to predict partnership success, developing a deep understanding of the business landscape, and carefully selecting our target audience for maximum impact.</p>
+        <button class="accordion">Planning Details</button>
+        <div class="panel">
+          <div class="panel-content">
+            <ul>
+              <li>Comprehensive SWOT analysis for partnership prediction</li>
+              <li>Deep understanding of the business and strategic goal setting</li>
+              <li>Careful selection and targeting of the audience</li>
+              <li>Risk assessment and mitigation strategies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="development" class="animate-on-scroll">
+      <h2>Development</h2>
+      <div class="section-highlight">
+        <h3>Building Bridges</h3>
+        <p>We focused on creating inclusive events and building essential skills within the immigrant community, fostering growth and integration.</p>
+        <button class="accordion">Development Strategies</button>
+        <div class="panel">
+          <div class="panel-content" style="color: var(--text-dark);">
+            <ul>
+              <li>Inclusive party hosting for immigrant communities</li>
+              <li>Job recruitment and comprehensive skill-building programs</li>
+              <li>Quality service delivery and community inclusion initiatives</li>
+              <li>Strategic public exposure via targeted posters and social media campaigns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="implementation" class="animate-on-scroll">
+      <h2>Implementation</h2>
+      <div class="card">
+        <p>Our implementation strategies included carefully targeted flyers, comprehensive social media campaigns, and expanding our influence to local food banks and community organizations.</p>
+        <button class="accordion">Implementation Steps</button>
+        <div class="panel">
+          <div class="panel-content">
+            <ul>
+              <li>Strategic flyer placement in high-traffic immigrant community locations</li>
+              <li>Engaging social media campaigns targeting younger demographics</li>
+              <li>Expanding influence and partnerships with local food banks</li>
+              <li>Improving communication channels and optimizing resource allocation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicity" class="animate-on-scroll">
+      <h2>Publicity</h2>
+      <div class="section-red">
+        <h3>Amplifying Our Message</h3>
+        <p>We leveraged social media platforms and community poster campaigns to maximize our reach and create lasting impact within target communities.</p>
+        <button class="accordion">Publicity Methods</button>
+        <div class="panel">
+          <div class="panel-content" style="color: var(--text-dark);"> 
+            <ul>
+              <li>Strategic social media campaigns with personal Instagram engagement boosts</li>
+              <li>Targeted poster placement in high-immigrant-traffic community areas</li>
+              <li>Community outreach through local organizations and partnerships</li>
+              <li>Digital marketing initiatives to reach broader audiences</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="outcomes" class="animate-on-scroll">
+      <h2>Outcomes</h2>
+      <div class="section-green">
+        <h3>Transformative Results</h3>
+        <p>Our project resulted in increased FBLA presence, showcased the benefits of community participation, and provided essential stepping stones for future initiatives.</p>
+        <button class="accordion">Outcomes Achieved</button>
+        <div class="panel">
+          <div class="panel-content" style="color: var(--text-dark);"">
+            <ul>
+              <li>Significantly increased FBLA presence in the community</li>
+              <li>Successfully showcased benefits of participating in FBLA programs</li>
+              <li>Provided stress relief and support for immigrant families</li>
+              <li>Established stepping stones for future community initiatives</li>
+              <li>Built lasting partnerships with local businesses</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fbla" class="animate-on-scroll">
+      <h2>FBLA: Future Business Leaders of America</h2>
+      <div class="fbla-banner">
+        <img src="./FBLA_VerticalLogo-1024x792.png" alt="FBLA Logo" class="fbla-logo">
+        <h3>Empowering the Next Generation of Leaders</h3>
+        <p>FBLA is the largest business career student organization in the world, preparing students for careers in business and leadership through real-world experiences and community impact.</p>
+      </div>
+      <div class="card">
+        <p>By participating in FBLA, students gain invaluable real-world business experience, develop essential leadership skills, and contribute meaningfully to their communities. Our partnership with China Chili exemplifies how FBLA members can create positive, lasting impact while building professional competencies.</p>
+        <button id="fblaModalBtn">Learn More About FBLA</button>
+      </div>
+    </section>
+
+    <section id="contact" class="animate-on-scroll">
+      <h2>Contact Us</h2>
+      <div class="section-highlight">
+        <h3>Get Involved</h3>
+        <p>Have questions about our partnership or want to get involved in future initiatives? We'd love to hear from you and explore collaboration opportunities.</p>
+        <button id="contactBtn">Send a Message</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 West-MEC Northeast Campus | FBLA National Leadership Conference</p>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact Us</h2>
+      <p>Thank you for your interest! Please email us at <strong>info@westmecfbla.org</strong> with your questions or use the form below.</p>
+      <form id="contactForm" onsubmit="return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" required placeholder="Tell us about your interest in our partnership or how you'd like to get involved..."></textarea>
+
+        <div id="formFeedback" class="feedback"></div>
+        
+        <button type="submit" id="submitBtn">Submit Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FBLA Modal -->
+  <div id="fblaModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>About FBLA</h2>
+      <p>FBLA (Future Business Leaders of America) is a dynamic student organization that prepares students for careers in business through academic competitions, leadership development, and meaningful community service projects.</p>
+      <p>Our members participate in conferences, competitions, and real-world projects that build essential business skills and leadership experience. The China Chili partnership demonstrates how FBLA members create tangible positive impact in their communities.</p>
+      <p>Learn more about FBLA and discover opportunities at <a href="https://www.fbla.org" target="_blank" style="color: var(--green); text-decoration: none; font-weight: 600;">www.fbla.org</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    // Scroll Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animate-on-scroll elements
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Accordion functionality
+    const accordions = document.getElementsByClassName("accordion");
+    for (let i = 0; i < accordions.length; i++) {
+      accordions[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+    // Modal functionality
+    const contactModal = document.getElementById("contactModal");
+    const fblaModal = document.getElementById("fblaModal");
+    const contactBtn = document.getElementById("contactBtn");
+    const fblaModalBtn = document.getElementById("fblaModalBtn");
+    const closeBtns = document.getElementsByClassName("close");
+    const submitBtn = document.getElementById("submitBtn");
+    const feedbackEl = document.getElementById("formFeedback");
+
+    // Open contact modal
+    contactBtn.onclick = function() {
+      contactModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    // Open FBLA modal
+    fblaModalBtn.onclick = function() {
+      fblaModal.style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    // Close modals
+    for (let i = 0; i < closeBtns.length; i++) {
+      closeBtns[i].onclick = function() {
+        contactModal.style.display = "none";
+        fblaModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target == contactModal) {
+        contactModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+      if (event.target == fblaModal) {
+        fblaModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+
+    // Form submission with feedback
+    submitBtn.onclick = function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      feedbackEl.style.display = "none";
+
+      if (!name || !email || !message) {
+        feedbackEl.textContent = "Please fill in all fields.";
+        feedbackEl.className = "feedback error";
+        feedbackEl.style.display = "block";
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        feedbackEl.textContent = "Please enter a valid email.";
+        feedbackEl.className = "feedback error";
+        feedbackEl.style.display = "block";
+        return;
+      }
+
+      feedbackEl.textContent = "Thank you! We’ll get back to you soon.";
+      feedbackEl.className = "feedback success";
+      feedbackEl.style.display = "block";
+      
+      setTimeout(() => {
+        document.getElementById("contactForm").reset();
+        contactModal.style.display = "none";
+        document.body.style.overflow = "auto";
+        feedbackEl.style.display = "none";
+      }, 2000);
+    }
+
+    // Smooth scrolling for navigation links with header offset
+    const headerHeight = document.querySelector('nav').offsetHeight;
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add dynamic background particles
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.style.position = 'fixed';
+      particle.style.width = '4px';
+      particle.style.height = '4px';
+      particle.style.backgroundColor = 'rgba(212, 175, 55, 0.6)';
+      particle.style.borderRadius = '50%';
+      particle.style.pointerEvents = 'none';
+      particle.style.zIndex = '-1';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.top = '100vh';
+      particle.style.animation = `floatUp ${3 + Math.random() * 4}s linear forwards`;
+      
+      document.body.appendChild(particle);
+      
+      setTimeout(() => {
+        particle.remove();
+      }, 7000);
+    }
+
+    // Add CSS for floating particles
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes floatUp {
+        to {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Create particles periodically
+    setInterval(createParticle, 3000);
+
+    // Dynamic team member highlights with random color spotlight
+    document.querySelectorAll('.team-member').forEach(member => {
+      member.addEventListener('mouseenter', function() {
+        const colors = ['rgba(27, 94, 32, 0.3)', 'rgba(212, 175, 55, 0.3)', 'rgba(198, 40, 40, 0.3)'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        this.style.boxShadow = `0 8px 32px ${randomColor}`;
+      });
+      member.addEventListener('mouseleave', function() {
+        this.style.boxShadow = 'var(--shadow-primary)';
+      });
+    });
+
+    // Enhanced button click effects
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.position = 'absolute';
+        ripple.style.background = 'rgba(255, 255, 255, 0.4)';
+        ripple.style.borderRadius = '50%';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.animation = 'ripple 0.6s linear';
+        ripple.style.pointerEvents = 'none';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+
+    // Add ripple animation
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(rippleStyle);
+  </script>
+</body>
+</html>
