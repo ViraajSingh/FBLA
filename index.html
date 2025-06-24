@@ -28,6 +28,43 @@
       --gradient-hero: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 50%, var(--green-light) 100%);
     }
 
+    .dark-mode {
+      --card-bg: rgba(30, 30, 30, 0.95);
+      --glass-bg: rgba(30, 30, 30, 0.2);
+      --text-dark: #f0f0f0;
+      --text-light: #aaa;
+      background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+      color: #f0f0f0;
+    }
+    .dark-mode body::before {
+      background: radial-gradient(circle at 20% 80%, rgba(27, 94, 32, 0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(198, 40, 40, 0.04) 0%, transparent 50%);
+    }
+    .dark-mode .card,
+    .dark-mode .team-member,
+    .dark-mode .accordion,
+    .dark-mode .panel {
+      color: var(--text-dark);
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .dark-mode nav {
+      background: rgba(30, 30, 30, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .dark-mode nav a {
+      color: var(--text-dark);
+    }
+    .dark-mode ul li::before {
+      color: var(--green-light);
+    }
+    .dark-mode .card:hover,
+    .dark-mode .team-member:hover,
+    .dark-mode .accordion:hover {
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -41,6 +78,7 @@
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
       scroll-behavior: smooth;
       overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     /* Animated Background */
@@ -77,6 +115,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      perspective: 1px;
     }
 
     header::before {
@@ -107,6 +146,7 @@
       position: relative;
       z-index: 2;
       max-width: 800px;
+      will-change: transform;
     }
 
     header h1 {
@@ -156,6 +196,7 @@
       z-index: 1000;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background 0.3s ease;
     }
 
     .nav-container {
@@ -178,6 +219,7 @@
       position: relative;
       overflow: hidden;
       font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     nav a::before {
@@ -200,6 +242,19 @@
       color: white;
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    #darkModeToggle {
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: 1rem;
+      transition: transform 0.3s ease;
+    }
+    #darkModeToggle:hover {
+      transform: scale(1.1);
     }
 
     /* Main Content */
@@ -263,6 +318,7 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 2rem;
+      color: var(--text-dark);
     }
 
     .card::before {
@@ -335,6 +391,7 @@
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
+      color: var(--text-dark);
     }
 
     .team-member::before {
@@ -365,6 +422,9 @@
       margin-bottom: 1rem;
       color: var(--green);
     }
+    .dark-mode .team-member h3 {
+      color: var(--green-light);
+    }
 
     /* Buttons */
     button {
@@ -380,24 +440,10 @@
       box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
       position: relative;
       overflow: hidden;
-    }
-
-    button::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    button:hover::before {
-      width: 300px;
-      height: 300px;
+      margin: 0.5rem 0;
+      display: inline-block;
+      text-align: center;
+      width: auto;
     }
 
     button:hover {
@@ -453,6 +499,7 @@
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-top: none;
+      color: var(--text-dark);
     }
 
     .panel-content {
@@ -520,9 +567,9 @@
     }
 
     .fbla-logo {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 2rem;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.5rem;
       border-radius: 50%;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -561,6 +608,7 @@
       box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
       position: relative;
       animation: slideInScale 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--text-dark);
     }
 
     @keyframes slideInScale {
@@ -651,6 +699,7 @@
       margin-top: 4rem;
       position: relative;
       overflow: hidden;
+      width: 100%;
     }
 
     footer::before {
@@ -668,11 +717,9 @@
       z-index: 2;
       font-size: 1.1rem;
       opacity: 0.9;
+      margin: 0 auto;
+      max-width: 800px;
     }
-    .card, .team-member {
-    color: var(--text-dark); /* Ensures text is black on white cards */
-}
-
 
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -680,34 +727,30 @@
         padding: 3rem 1rem;
         min-height: 60vh;
       }
-
       main {
         padding: 2rem 1rem;
       }
-
       section {
         margin-bottom: 4rem;
       }
-
       .card, .section-highlight, .section-green, .section-red, .fbla-banner {
         padding: 2rem;
       }
-
       .team {
         grid-template-columns: 1fr;
       }
-
       nav {
         padding: 1rem;
       }
-
       .nav-container {
         gap: 0.25rem;
       }
-
       nav a {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+      }
+      footer {
+        padding: 2rem 1rem;
       }
     }
 
@@ -718,15 +761,31 @@
         transform: translateY(30px);
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
       }
-
       .animate-on-scroll.in-view {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
+    /* New: Animated cursor trail (optional, but cool for judges) */
+    .cursor-trail {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: var(--yellow);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(4px);
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      mix-blend-mode: overlay;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
   </style>
 </head>
 <body>
+  <div class="cursor-trail"></div>
   <header>
     <div class="header-content">
       <h1>PARTNERSHIP WITH CHINA CHILI</h1>
@@ -749,6 +808,9 @@
       <a href="#outcomes">Outcomes</a>
       <a href="#fbla">FBLA</a>
       <a href="#contact">Contact</a>
+      <button id="darkModeToggle" aria-label="Toggle dark mode">
+        <span class="icon">🌓</span>
+      </button>
     </div>
   </nav>
 
@@ -764,7 +826,7 @@
       <h2>Project Goals</h2>
       <div class="section-green">
         <h3>Our Vision</h3>
-        <p>Our primary objectives are to strengthen relationships with immigrants, expand community outreach, and break down barriers to participation in local events and services.</p>
+        <p>Our vision is to build a more inclusive community by strengthening partnerships with immigrants, broadening outreach, and breaking down obstacles to involvement in local events and services—so that all members can experience belonging, growth, and success.</p>
       </div>
       <div class="card">
         <ul>
@@ -858,7 +920,7 @@
         <p>We leveraged social media platforms and community poster campaigns to maximize our reach and create lasting impact within target communities.</p>
         <button class="accordion">Publicity Methods</button>
         <div class="panel">
-          <div class="panel-content" style="color: var(--text-dark);"> 
+          <div class="panel-content" style="color: var(--text-dark);">
             <ul>
               <li>Strategic social media campaigns with personal Instagram engagement boosts</li>
               <li>Targeted poster placement in high-immigrant-traffic community areas</li>
@@ -877,7 +939,7 @@
         <p>Our project resulted in increased FBLA presence, showcased the benefits of community participation, and provided essential stepping stones for future initiatives.</p>
         <button class="accordion">Outcomes Achieved</button>
         <div class="panel">
-          <div class="panel-content" style="color: var(--text-dark);"">
+          <div class="panel-content" style="color: var(--text-dark);">
             <ul>
               <li>Significantly increased FBLA presence in the community</li>
               <li>Successfully showcased benefits of participating in FBLA programs</li>
@@ -923,18 +985,14 @@
       <span class="close">&times;</span>
       <h2>Contact Us</h2>
       <p>Thank you for your interest! Please email us at <strong>info@westmecfbla.org</strong> with your questions or use the form below.</p>
-      <form id="contactForm" onsubmit="return false;">
+      <form id="contactForm">
         <label for="name">Name:</label>
         <input type="text" id="name" required>
-        
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        
         <label for="message">Message:</label>
         <textarea id="message" required placeholder="Tell us about your interest in our partnership or how you'd like to get involved..."></textarea>
-
         <div id="formFeedback" class="feedback"></div>
-        
         <button type="submit" id="submitBtn">Submit Message</button>
       </form>
     </div>
@@ -952,12 +1010,28 @@
   </div>
 
   <script>
-    // Scroll Animation Observer
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+    // Check local storage for saved preference
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
 
+    // Scroll-based parallax on header
+    window.addEventListener('scroll', function() {
+      const scrolled = window.scrollY;
+      const header = document.querySelector('header');
+      if (header) {
+        header.style.backgroundPositionY = -scrolled * 0.5 + 'px';
+      }
+    });
+
+    // Scroll Animation Observer
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -965,8 +1039,6 @@
         }
       });
     }, observerOptions);
-
-    // Observe all animate-on-scroll elements
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
       observer.observe(el);
     });
@@ -977,7 +1049,6 @@
       accordions[i].addEventListener("click", function() {
         this.classList.toggle("active");
         const panel = this.nextElementSibling;
-        
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
@@ -1029,7 +1100,7 @@
     }
 
     // Form submission with feedback
-    submitBtn.onclick = function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
@@ -1061,7 +1132,7 @@
         document.body.style.overflow = "auto";
         feedbackEl.style.display = "none";
       }, 2000);
-    }
+    });
 
     // Smooth scrolling for navigation links with header offset
     const headerHeight = document.querySelector('nav').offsetHeight;
@@ -1080,25 +1151,26 @@
       });
     });
 
-    // Add dynamic background particles
+    // Dynamic background particles (visible in both light and dark mode)
     function createParticle() {
       const particle = document.createElement('div');
+      const size = 2 + Math.random() * 3;
+      const opacity = 0.4 + Math.random() * 0.3;
+      const color = document.body.classList.contains('dark-mode')
+        ? `rgba(212, 175, 55, ${opacity})`
+        : `rgba(27, 94, 32, ${opacity})`;
       particle.style.position = 'fixed';
-      particle.style.width = '4px';
-      particle.style.height = '4px';
-      particle.style.backgroundColor = 'rgba(212, 175, 55, 0.6)';
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.backgroundColor = color;
       particle.style.borderRadius = '50%';
       particle.style.pointerEvents = 'none';
       particle.style.zIndex = '-1';
       particle.style.left = Math.random() * 100 + 'vw';
       particle.style.top = '100vh';
-      particle.style.animation = `floatUp ${3 + Math.random() * 4}s linear forwards`;
-      
+      particle.style.animation = `floatUp ${2 + Math.random() * 4}s linear forwards`;
       document.body.appendChild(particle);
-      
-      setTimeout(() => {
-        particle.remove();
-      }, 7000);
+      setTimeout(() => { particle.remove(); }, 8000);
     }
 
     // Add CSS for floating particles
@@ -1106,15 +1178,17 @@
     style.textContent = `
       @keyframes floatUp {
         to {
-          transform: translateY(-100vh) rotate(360deg);
+          transform: translateY(-100vh) rotate(${Math.random() * 360}deg);
           opacity: 0;
         }
       }
     `;
     document.head.appendChild(style);
 
-    // Create particles periodically
-    setInterval(createParticle, 3000);
+    // Create 3 particles every 0.5 seconds
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) { createParticle(); }
+    }, 500);
 
     // Dynamic team member highlights with random color spotlight
     document.querySelectorAll('.team-member').forEach(member => {
@@ -1128,7 +1202,7 @@
       });
     });
 
-    // Enhanced button click effects
+    // Enhanced button click effects (ripple)
     document.querySelectorAll('button').forEach(button => {
       button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -1136,7 +1210,6 @@
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
-        
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
@@ -1146,12 +1219,8 @@
         ripple.style.transform = 'scale(0)';
         ripple.style.animation = 'ripple 0.6s linear';
         ripple.style.pointerEvents = 'none';
-        
         this.appendChild(ripple);
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
+        setTimeout(() => { ripple.remove(); }, 600);
       });
     });
 
@@ -1159,13 +1228,19 @@
     const rippleStyle = document.createElement('style');
     rippleStyle.textContent = `
       @keyframes ripple {
-        to {
-          transform: scale(2);
-          opacity: 0;
-        }
+        to { transform: scale(2); opacity: 0; }
       }
     `;
     document.head.appendChild(rippleStyle);
+
+    // NEW: Animated cursor trail (cool for judges!)
+    const cursorTrail = document.querySelector('.cursor-trail');
+    document.addEventListener('mousemove', (e) => {
+      cursorTrail.style.left = e.clientX + 'px';
+      cursorTrail.style.top = e.clientY + 'px';
+      cursorTrail.style.opacity = '0.8';
+      setTimeout(() => { cursorTrail.style.opacity = '0'; }, 100);
+    });
   </script>
 </body>
 </html>
